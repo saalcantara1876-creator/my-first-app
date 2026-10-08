@@ -1,0 +1,22 @@
+name: Release
+
+# On every merge to main, release-please opens (or updates) a "release PR"
+# containing the next version number and CHANGELOG. Merging that PR creates
+# the GitHub release and tag. Nothing is released until you merge it.
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: googleapis/release-please-action@v4
+        with:
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
