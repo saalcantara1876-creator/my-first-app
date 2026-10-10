@@ -1,6 +1,6 @@
 [project]
 name = "my-first-app"
-version = "0.1.0"
+version = "0.2.0"
 description = "Built with an AI-assisted, controlled-release workflow"
 readme = "README.md"
 requires-python = ">=3.12"
